@@ -44,8 +44,11 @@ class Tooltip {
   }
 
   updatePosition(event) {
+    const element = this.element;
+    if (!element) return;
+
     const shift = 10;
-    const tooltipRect = this.element.getBoundingClientRect();
+    const tooltipRect = element.getBoundingClientRect();
     const width = tooltipRect.width;
     const height = tooltipRect.height;
     let top = event.clientY + shift;
