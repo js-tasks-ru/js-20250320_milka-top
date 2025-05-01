@@ -96,7 +96,7 @@ export default class SortableTable {
     return Array.from(elements).reduce((accum, subElement) => {
       accum[subElement.dataset.element] = subElement;
       return accum;
-    });
+    }, {});
   }
 
   sortStrings(arr, sortType, param = 'asc') {
